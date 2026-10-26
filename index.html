@@ -54,10 +54,11 @@
   <div class="card">
     <a class="btn" id="dl" href="#">下载安卓版 APK（37.3 MB）</a>
     <p class="relink">版本 <b>0.7.22-android.280</b> · 需要 Android 7.0 以上</p>
+    <p class="relink" style="margin-top:6px;color:#7d7b92">文件走国内加速节点，下载慢或卡住就换下面另一条</p>
   </div>
 
-  <h2>主链接打不开？点下面的加速通道</h2>
-  <p class="muted" style="margin-top:-2px">同样的文件，走国内可直连的 GitHub 加速节点，任选一个能下载的即可。</p>
+  <h2>下载不动？换一条通道</h2>
+  <p class="muted" style="margin-top:-2px">同一个文件，换个节点重试。最后一条是 GitHub 官方直连，中国大陆大概率打不开，只在前面几条全挂时试。</p>
   <div class="mirrors" id="mirrors"></div>
 
   <h2>怎么装</h2>
@@ -98,19 +99,19 @@
 </div>
 
 <script>
-  var BASE = "https://github.com/qiuyuxiaoc-byte/folia-share/releases/latest/download/Folia-Android-0.7.22.apk";
+  var GH = "https://github.com/qiuyuxiaoc-byte/folia-share/releases/latest/download/Folia-Android-0.7.22.apk";
   var MIRRORS = [
-    ["ghfast", "https://ghfast.top/"],
-    ["ghproxy", "https://ghproxy.net/"],
-    ["gh-proxy", "https://gh-proxy.com/"],
-    ["llkk", "https://gh.llkk.cc/"]
+    ["ghproxy", "https://ghproxy.net/", GH],
+    ["gh-proxy", "https://gh-proxy.com/", GH],
+    ["llkk", "https://gh.llkk.cc/", GH],
+    ["GitHub 直连", "", GH]
   ];
-  document.getElementById("dl").href = BASE;
+  document.getElementById("dl").href = "https://ghfast.top/" + GH;
   var box = document.getElementById("mirrors");
   MIRRORS.forEach(function (m) {
     var a = document.createElement("a");
-    a.href = m[1] + BASE;
-    a.textContent = m[0] + " 加速";
+    a.href = m[1] + m[2];
+    a.textContent = m[0] + (m[1] ? " 加速" : "");
     box.appendChild(a);
   });
 </script>
