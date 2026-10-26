@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Folia 安卓版 · 下载</title>
+<meta name="description" content="Folia 沉浸式歌词音乐播放器安卓版下载，含国内加速镜像。">
+<meta name="theme-color" content="#0b0b12">
+<style>
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  :root{--bg:#0b0b12;--card:#16161f;--line:#262633;--txt:#ecebf3;--dim:#9b9aae;--acc:#8b7dff;--acc2:#4ad9c4}
+  html,body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  body{background:
+     radial-gradient(70% 45% at 15% 0%,rgba(139,125,255,.22),transparent 70%),
+     radial-gradient(60% 40% at 90% 8%,rgba(74,217,196,.14),transparent 70%),
+     var(--bg);min-height:100vh;padding:28px 18px 56px}
+  .wrap{max-width:600px;margin:0 auto}
+  h1{font-size:30px;line-height:1.25;margin:14px 0 6px;letter-spacing:-.5px}
+  h1 span{background:linear-gradient(92deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--dim);font-size:14px;margin:0 0 22px}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}
+  .btn{display:block;text-align:center;text-decoration:none;font-weight:700;font-size:17px;
+    padding:16px;border-radius:14px;background:linear-gradient(92deg,var(--acc),#6f5cf0);color:#fff;
+    box-shadow:0 10px 28px rgba(139,125,255,.28);transition:transform .12s}
+  .btn:active{transform:scale(.985)}
+  .relink{text-align:center;font-size:12px;color:var(--dim);margin:10px 0 0}
+  .relink b{color:#c9c7dd;font-weight:600}
+  .mirrors{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+  .mirrors a{display:block;text-align:center;text-decoration:none;font-size:13px;font-weight:600;
+    padding:11px 6px;border-radius:11px;border:1px solid var(--line);background:#1b1b26;color:#cfcde0}
+  .mirrors a:active{background:#242433}
+  h2{font-size:15px;margin:26px 0 8px;letter-spacing:.2px}
+  ol,ul{margin:0;padding-left:20px;color:#d3d1e2;font-size:14px}
+  li{margin:7px 0}
+  .muted{color:var(--dim);font-size:13px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;
+    background:#101018;border:1px solid var(--line);border-radius:6px;padding:2px 5px;word-break:break-all;color:#a9e6db}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;
+    border:1px solid rgba(139,125,255,.45);color:#b7adff;margin-left:6px;vertical-align:middle}
+  .warn{border-color:rgba(255,176,80,.35);background:rgba(255,176,80,.06)}
+  .warn h2{margin-top:0;color:#ffc46b}
+  footer{text-align:center;color:#5f5e72;font-size:12px;margin-top:34px;line-height:1.9}
+  a{color:#b7adff}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Folia<br><span>沉浸式歌词播放器</span></h1>
+  <p class="sub">全屏歌词动画 · 网易云 / 酷狗 / 酷我 / 本地音乐 · 安卓版</p>
+
+  <div class="card">
+    <a class="btn" id="dl" href="#">下载安卓版 APK（37.3 MB）</a>
+    <p class="relink">版本 <b>0.7.22-android.280</b> · 需要 Android 7.0 以上</p>
+  </div>
+
+  <h2>主链接打不开？点下面的加速通道</h2>
+  <p class="muted" style="margin-top:-2px">同样的文件，走国内可直连的 GitHub 加速节点，任选一个能下载的即可。</p>
+  <div class="mirrors" id="mirrors"></div>
+
+  <h2>怎么装</h2>
+  <ol>
+    <li>点上面的按钮下载（37 MB，别用流量的话连个 WiFi）</li>
+    <li>下载完点通知栏里的安装包，或去「文件管理 → Download」找 <code>Folia-Android-0.7.22.apk</code></li>
+    <li>系统提示「禁止安装未知应用」→ 点<b>设置</b>，把浏览器/文件管理的开关打开</li>
+    <li>vivo / iQOO 会弹安全检测，选<b>「继续安装」</b>（这是自签名的非商店应用，属于正常提示）</li>
+    <li>装完打开，第一次会让你选音源；国内音源不用梯子，Spotify 和 YouTube Music 才需要</li>
+  </ol>
+
+  <h2>这个包是什么</h2>
+  <p class="muted">
+    Folia 官方只出了 Windows / macOS / Linux 桌面版，
+    <b>没有官方安卓版</b>。这个是社区移植版
+    <a href="https://github.com/whycfawa/folia-android" target="_blank" rel="noopener">whycfawa/folia-android</a>
+    （基于上游 AGPL-3.0 源码，用 Capacitor 套壳，加了后台播放和锁屏控制）。
+    签名是开发者的 debug 证书，所以以后如果换签名，需要先卸载再装。
+  </p>
+
+  <h2>文件校验（可选）</h2>
+  <p class="muted">想确认文件没被改过，可以核对 SHA-256：</p>
+  <p><code>4fd9bf48a2ff1ae9d7ae5ba52cdc3f7dd2c5d36c97331a0abc8e678fd36b4773</code></p>
+
+  <div class="card warn">
+    <h2>不想装 APP？</h2>
+    <p class="muted" style="margin-bottom:0">
+      官方推的是网页版：自己部署一份 Folia Web，用 Chrome 打开后「添加到主屏幕」，效果接近原生。
+      代价是需要一台常开的服务器（或 Vercel 免费部署），具体要求看
+      <a href="https://folia-site.cielaniska.top/guide/deploy-vercel" target="_blank" rel="noopener">官方部署文档</a>。
+    </p>
+  </div>
+
+  <footer>
+    本站只是搬运，不托管任何音乐内容<br>
+    上游项目 <a href="https://github.com/chthollyphile/folia-major" target="_blank" rel="noopener">chthollyphile/folia-major</a> · AGPL-3.0
+  </footer>
+</div>
+
+<script>
+  var BASE = "https://github.com/qiuyuxiaoc-byte/folia-share/releases/latest/download/Folia-Android-0.7.22.apk";
+  var MIRRORS = [
+    ["ghfast", "https://ghfast.top/"],
+    ["ghproxy", "https://ghproxy.net/"],
+    ["gh-proxy", "https://gh-proxy.com/"],
+    ["llkk", "https://gh.llkk.cc/"]
+  ];
+  document.getElementById("dl").href = BASE;
+  var box = document.getElementById("mirrors");
+  MIRRORS.forEach(function (m) {
+    var a = document.createElement("a");
+    a.href = m[1] + BASE;
+    a.textContent = m[0] + " 加速";
+    box.appendChild(a);
+  });
+</script>
+</body>
+</html>
